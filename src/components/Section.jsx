@@ -7,10 +7,10 @@ import Graph from "./Graph";
   const {quiz} = useQuiz();
   console.log(quiz)
   const stats = [
-    { label: "Servicio", value: `${quiz[0]}/10` },
-    { label: "Ahorro", value: `${quiz[1]}/10` },
-    { label: "Eficiencia", value: `${quiz[2]}/10` },
-    { label: "Actualización", value: `${quiz[3]}/10` },
+    { label: "Servicio", value: `${quiz[0]}/10`, color: "gray" },
+    { label: "Ahorro", value: `${quiz[1]}/10`, color: "teal"},
+    { label: "Eficiencia", value: `${quiz[2]}/10`, color: "gray" },
+    { label: "Actualización", value: `${quiz[3]}/10`, color: "teal" },
   ];
 
 
@@ -127,21 +127,25 @@ import Graph from "./Graph";
           </div>
 
           {/* Stats section */}
-          <div className="mt-10">
-            <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
+          <div className="mt-10 ">
+            <dl className="grid grid-cols-4 gap-x-2 gap-y-8 justify-items-center items-center  ">
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="border-t-2 border-gray-100 pt-6"
+                  className={`border-t-2 border-gray-100 pt-2  bg-${stat.color}-600 py-5 px-4 rounded-lg`}
                 >
-                  <dt className="text-base font-medium text-gray-500">
+                  <dt className="text-base font-medium text-white text-center">
                     {stat.label}
                   </dt>
-                  <dd className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  <dd className="text-3xl font-extrabold tracking-tight  text-gray-1000">
                     {stat.value}
                   </dd>
                 </div>
               ))}
+
+              
+
+
             </dl>
             {/*             <div className="mt-10">
               <a href="#" className="text-base font-medium text-indigo-600">
