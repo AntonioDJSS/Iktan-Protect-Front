@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Alerta from "./Alerta";
 import useQuiz from "../hooks/useQuiz";
+import { Redirect } from "react-router-dom"
+
 
 const Form = () => {
   const [respuesta01, setRespuesta01] = useState("");
@@ -143,7 +145,7 @@ const Form = () => {
                   </div> */}
 
                   <div className="mt-6">
-                    <form className="space-y-6" onSubmit={handleSubmit}>
+                    <form className="space-y-6" action="" onSubmit={handleSubmit}>
                       <div>
                         <label
                           htmlFor="servicio"
