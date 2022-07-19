@@ -32,7 +32,7 @@ function App() {
               <Route path="Politicas-Privacidad" element={< PoliticasPrivacidad/>} />
             </Route>
 
-            <Route path="encuesta" element={<RutaProtegida />}>
+            <Route path="/encuesta" element={<RutaProtegida />}>
               <Route index element={<Quiz />} />
             </Route>
           </Routes>

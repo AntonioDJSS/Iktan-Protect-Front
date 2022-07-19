@@ -9,8 +9,6 @@ import {Formik, useFormik} from "formik";
 //Importamos el Schema de formulario
 import * as yup from "yup";
 
-
-
 //Logica para el correo
 const sendEmail=(event) => {
   //Previene el primer elemnto dle formulario post cargado
@@ -36,6 +34,10 @@ export default function ContactEmail() {
   const [agreed, setAgreed] = useState(false);
 
 
+
+
+
+
   //Logia para las validaciones
   const basicSchema = yup.object().shape({
     firstName: yup.string().required("Requerido"),
@@ -45,7 +47,7 @@ export default function ContactEmail() {
     phoneNumber: yup.string().required("Requerido"),
     message: yup.string().required("Requerido"),
 
-});
+  });
 
   return (
     <>
@@ -340,7 +342,7 @@ export default function ContactEmail() {
                       Al seleccionar esto, usted acepta las{" "}
                       <a
                         href= "Politicas-Privacidad"
-
+                       
                         className="font-medium text-gray-700 underline"
                       >
                         Politicas de Privacidad
@@ -374,6 +376,7 @@ export default function ContactEmail() {
         </div>
       </div>
       <Footer />
+     
     </>
   );
 }

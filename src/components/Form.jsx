@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Alerta from "./Alerta";
 import useQuiz from "../hooks/useQuiz";
-import { Redirect } from "react-router-dom"
-
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [respuesta01, setRespuesta01] = useState("");
@@ -12,6 +11,7 @@ const Form = () => {
 
   const [alerta, setAlerta] = useState({});
   const { guardarQuiz } = useQuiz();
+  let navigate= useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,9 +25,14 @@ const Form = () => {
       return;
     }
     setAlerta({});
-    guardarQuiz({ respuesta01, respuesta02, respuesta03, respuesta04 });
+  
+      guardarQuiz({ respuesta01, respuesta02, respuesta03, respuesta04 });
+      navigate("/email")
+
   };
+
   const { msg } = alerta;
+  //
   return (
     <>
       <html class="h-screen bg-white">

@@ -5,7 +5,12 @@ const RutaProtegida = () => {
   console.log(auth);
   console.log(cargando);
   if (cargando) return "Cargando";
-  return <>{auth?._id ? <Outlet /> : <Navigate to="/" />}</>;
+  return (
+  <>
+  {auth?._id ? <Outlet /> : <Navigate to="/" />}
+  
+  
+  </>);
 };
 
 export default RutaProtegida;

@@ -10,6 +10,9 @@ const Login = () => {
   const [tokenAdmin, setTokenAdmin] = useState("");
   const [alerta, setAlerta] = useState("");
 
+  const {setAuth} = useAuth()
+
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -26,6 +29,7 @@ const Login = () => {
         tokenAdmin,
       });
       localStorage.setItem("token", data.token);
+      setAuth(data)
       navigate("/encuesta");
     } catch (error) {
       setAlerta({
