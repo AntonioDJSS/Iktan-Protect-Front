@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Alerta from "./Alerta";
 import useQuiz from "../hooks/useQuiz";
-import { useNavigate } from "react-router-dom"
-
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [respuesta01, setRespuesta01] = useState("");
@@ -13,8 +12,6 @@ const Form = () => {
   const [alerta, setAlerta] = useState({});
   const { guardarQuiz } = useQuiz();
   let navigate = useNavigate();
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +28,6 @@ const Form = () => {
     guardarQuiz({ respuesta01, respuesta02, respuesta03, respuesta04 });
 
     navigate("finalizado");
-
   };
   const { msg } = alerta;
   return (
@@ -151,7 +147,11 @@ const Form = () => {
                   </div> */}
 
                   <div className="mt-6">
-                    <form className="space-y-6" action="" onSubmit={handleSubmit}>
+                    <form
+                      className="space-y-6"
+                      action=""
+                      onSubmit={handleSubmit}
+                    >
                       <div>
                         <label
                           htmlFor="servicio"
@@ -243,7 +243,7 @@ const Form = () => {
                             onChange={(e) => setRespuesta04(e.target.value)}
                             className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                           >
-                           <option value="">Califica tú ahorro</option>
+                            <option value="">Califica tú ahorro</option>
                             <option value="2">Malo</option>
                             <option value="4">Regular</option>
                             <option value="6">Mejorable</option>

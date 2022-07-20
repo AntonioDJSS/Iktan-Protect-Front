@@ -1,13 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import LoginTitle from "../components/LoginTitle";
+import useAuth from "../hooks/useAuth";
 import clienteAxios from "../config/axios";
 import Alerta from "../components/Alerta";
 const Login = () => {
   const [tokenAdmin, setTokenAdmin] = useState("");
   const [alerta, setAlerta] = useState("");
+
+  const { setAuth } = useAuth();
 
   const navigate = useNavigate();
 
@@ -25,6 +28,7 @@ const Login = () => {
         tokenAdmin,
       });
       localStorage.setItem("token", data.token);
+      setAuth(data);
       navigate("encuesta");
     } catch (error) {
       setAlerta({
