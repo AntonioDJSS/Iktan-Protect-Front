@@ -6,44 +6,44 @@ const faqs = [
   {
     question: "¿CUÁNTO TIEMPO TARDA EL REGISTRO DE UNA PÓLIZA ANTE LA ASEA?",
     answer:
-      "En un escenario sin contratiempos, en 15 días hábiles o antes. En el peor escenario puede tomar hasta 60 días hábiles.",
+      "Una vez ingresado el trámite de Registro de Pólizas, la ASEA cuenta con 15 días hábiles para responder al mismo. Sin embargo, debes considerar que la ASEA cuenta con los mismos 15 días hábiles para emitir una prevención y, en el caso de que esto ocurra, los Regulados cuentan con hasta 30 días hábiles para responder.",
   },
   {
     question: "¿CUÁNTO CUESTA REALIZAR EL REGISTRO DE PÓLIZAS EN LA ASEA?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "El Registro de Pólizas no implican el pago de derechos ante la ASEA, es un trámite gratuito.",
   },
   {
     question: "¿PUEDO PAGAR MI PÓLIZA EN PARCIALIDADES?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Directamente la aseguradora no debe ofrecer el pago fraccionado. Con base en el artículo 39 de la Ley sobre el Contrato de Seguro en los seguros obligatorios no se podrá convenir el pago fraccionado.",
   },
   {
     question: "¿PUEDO CAMBIAR DE COMPAÑÍA ASEGURADORA?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Sí, pero debes esperar a que concluya su periodo de vigencia de tu póliza.",
   },
   {
     question: "¿DÓNDE PUEDO CONTRATAR UN ESTUDIO DE PÉRDIDA MÁXIMA PROBABLE?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Puedes encontrar los datos de contacto de todas las empresas autorizadas para realizar estos estudios,  en el En el Padrón de Terceros Autorizados de ASEA. ",
   },
   {
     question: "¿CUÁL ES LA REGULACIÓN DE SEGUROS QUE ME APLICA?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "La regulacion de seguros de ASEA está dividida en dos categorías: INDUSTRIAL que aplica para actividades de Exploración y Extracción de Hidrocarburos, Tratamiento y Refinación de Petróleo y Procesamiento de Gas Natural, y TADE que aplica para actividades de transporte, almacenamiento, distribución, compresión, descompresión, licuefacción, regasificación o expendio al público de hidrocarburos o petrolíferos..",
   },
   {
     question:
       "¿SI MI PROYECTO ES NUEVO, EN QUE MOMENTO DEBO REALIZAR EL REGISTRO DE PÓLIZAS ANTE LA ASEA?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Los Regulados son responsables de reparar e indemnizar por los daños o perjuicios que ocasionen en razón de las actividades que desarrollen en términos de las presentes Disposiciones, aun cuando se vean impedidos de hacer efectiva la Póliza de Seguro ante un evento.",
   },
   {
     question:
       "¿LAS POLIZAS DE SEGURO DEBEN INCLUIR A LOS CONTRATISTAS, SUBCONTRATISTAS, PROVEEDORES O PRESTADORES DE SERVICIOS?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "No es obligatorio que los incluyas en tu póliza, pero debes tener en cuenta dos cosas: Para actividades de TADE, recuerda que eres responsable de cubrir los daños daños o perjuicios provocados por tus contratistas, subcontratistas, proveedores o prestadores de servicios en el desarrollo de las actividades, aun cuando te veas impedido de hacer efectiva la Póliza de Seguro ante un evento. Para actividades de la rama INDUSTRIAL, es obligatorio que les exijas mantener pólizas de seguro vigentesy mantener las mismas disponibles en tus instalaciones.",
   },
 ];
 
