@@ -1,5 +1,12 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faHelmetSafety, faShieldHeart, faCannabis, faTowerObservation, faTruckDroplet, faCross} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHelmetSafety,
+  faShieldHeart,
+  faCannabis,
+  faTowerObservation,
+  faTruckDroplet,
+  faCross,
+} from "@fortawesome/free-solid-svg-icons";
 
 /* This example requires Tailwind CSS v2.0+ */
 import {
@@ -10,8 +17,7 @@ import {
   GlobeIcon,
   FingerPrintIcon,
   HomeIcon,
-  ShieldCheckIcon
-
+  ShieldCheckIcon,
 } from "@heroicons/react/outline";
 
 const features = [
@@ -19,36 +25,36 @@ const features = [
     name: "Pólizas de ASEA",
     description:
       "Los Regulados deben contar en todo momento con un seguro vigente de Responsabilidad Civil y Responsabilidad Ambiental, registrado ante la ASEA",
-    icon:  faShieldHeart,
+    icon: "https://i.imgur.com/QvrKgyo.png",
   },
   {
     name: "Responsabilidad Civil",
     description:
-      "Los Regulados son responsables en todo momento por los daños o perjuicios provocados por sus contratistas, subcontratistas, proveedores o prestadores de servicios en el desarrollo de las actividades del Sector Hidrocarburos propias de los Regulados",
-    icon: faHelmetSafety
+      "Los Regulados son responsables en todo momento por\n" +
+      "\nlos daños o perjuicios provocados por sus contratistas, subcontratistas, proveedores o prestadores de servicios en el desarrollo de las actividades del Sector Hidrocarburos propias de los Regulados",
+    icon: "https://i.imgur.com/lzCZHEP.png",
   },
   {
     name: "Responsabilidad Ambiental",
     description:
       "Atención a emergencias; Contención de contaminantes;Mitigación de impactos y daños ambientales; Caracterización de sitios contaminados; Remediación de sitios contaminados, y Restauración o compensación ambiental.",
-    icon: faCannabis
+    icon: "https://i.imgur.com/sJ5VUG9.png",
   },
   {
     name: "Póliza de Control de Pozos",
     description:
       "Operator Extra Expensescon base en las Inversiones de Perforación Autorizados",
-    icon: faTowerObservation,
+    icon: "https://i.imgur.com/Josxj1T.png",
   },
   {
     name: "Flotillas",
-    description:
-      "Soluciones para empresas",
-    icon: faTruckDroplet,
+    description: "Soluciones para empresas",
+    icon: "https://i.imgur.com/3T6qnNr.png",
   },
   {
     name: "Gastos Médicos Mayores",
     description: "Soluciones para empresas",
-    icon: faCross,
+    icon: "https://i.imgur.com/nxzXuAZ.png",
   },
 ];
 
@@ -78,9 +84,10 @@ export default function Feature() {
                   <div className="-mt-6">
                     <div>
                       <span className="inline-flex items-center justify-center rounded-md bg-teal-500 p-3 shadow-lg fa-Regular">
-                        <FontAwesomeIcon
+                        <img
+                          className="object-contain h-5 w-5"
                           style={{ color: "white" }}
-                          icon={feature.icon}
+                          src={feature.icon}
                         />
                       </span>
                     </div>

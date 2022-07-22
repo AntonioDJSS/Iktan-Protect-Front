@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = [
-  {
+  /*   {
     name: "Facebook",
     href: "#",
     icon: (props) => (
@@ -25,7 +25,7 @@ const navigation = [
         />
       </svg>
     ),
-  },
+  }, */
 
   {
     name: "GitHub",

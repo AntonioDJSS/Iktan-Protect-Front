@@ -2,12 +2,12 @@
 export default function Informative() {
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base font-semibold text-teal-600 tracking-wide uppercase">
             Informativo
           </h2>
-          <p className="mt-1 text-xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+          <p className="mt-1 text-xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-2xl">
             “Todas las medidas que esten encaminadas a prevenir y reparar daños
             nunca estarán de más, pues el riesgo siempre estará presente”
           </p>
