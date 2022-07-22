@@ -3,7 +3,7 @@ const navigation = [
   { name: "Inicio", href: "/" },
   { name: "Servicios", href: "servicios" },
   { name: "Conocenos", href: "conocenos" },
-/*   { name: "Contactanos", href: "email" }, */
+  /*   { name: "Contactanos", href: "email" }, */
 ];
 
 export default function HeaderFragment() {
@@ -31,20 +31,6 @@ export default function HeaderFragment() {
                 </a>
               ))}
             </div>
-          </div>
-          <div className="ml-10 space-x-4">
-            <a
-              href="/persona-fisica"
-              className="inline-block bg-teal-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
-            >
-              Personas
-            </a>
-            <a
-              href="/persona-moral"
-              className="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-teal-600 hover:bg-teal-50"
-            >
-              Empresas
-            </a>
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">

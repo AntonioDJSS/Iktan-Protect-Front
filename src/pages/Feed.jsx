@@ -65,19 +65,19 @@ export default function Feed() {
       <FeedHeader />
       <div className="bg-white flex row-span-2 justify-center">
         <div className="flex justify-center">
-          <div className="my-7 ">
+          <div className="md:my-7 ">
             <img
-              className="relative left-[82px]  h-[750px] w-[320px]"
+              className="md:relative invisible md:visible md:left-[82px] md:h-[750px] md:w-[320px]"
               src=" https://i.imgur.com/TEuzugD.png"
               alt="image"
             />
           </div>
-          <div className="pt-16 ">
+          <div className="pt-16 -ml-28 mr-12 md:ml-0 md:mr-0">
             {/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
-            <div className=" relative right-21  max-w-2xl">
+            <div className=" md:relative md:right-21  md:max-w-2xl">
               {/* Content goes here */}
 
-              <div className="relative right-[40px] ">
+              <div className="md:relative md:right-[40px] ">
                 <p className=" font-bold text-gray-800 uppercase text-3xl">
                   ¿Cómo
                 </p>
@@ -88,11 +88,11 @@ export default function Feed() {
               <ul role="list" className="">
                 {timeline.map((event, eventIdx) => (
                   <li key={event.id}>
-                    <div className="relative pb-8 ">
+                    <div className="md:relative md:pb-8 ">
                       {eventIdx !== timeline.length - 1 ? (
-                        <span className="absolute" aria-hidden="true" />
+                        <span className="md:absolute" aria-hidden="true" />
                       ) : null}
-                      <div className="relative flex space-x-3 md:right-[120px] ">
+                      <div className="md:relative flex md:space-x-3 md:right-[120px] ">
                         <div>
                           <span
                             className={classNames(
