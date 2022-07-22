@@ -83,10 +83,11 @@ export default function Metodologia() {
                 <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
                   <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                     <div className="py-2">
-                      <span className="inline-flex items-center justify-center rounded-md bg-teal-700 p-3 shadow-lg fa-Regular">
-                        <CogIcon
-                          className="h-6 w-6 text-white"
-                          aria-hidden="true"
+                      <span className="inline-flex items-center justify-center rounded-md bg-teal-500 p-3 shadow-lg fa-Regular">
+                        <img
+                          className="object-contain h-5 w-5"
+                          style={{ color: "white" }}
+                          src="https://imgur.com/ipeOLYY.png"
                         />
                       </span>
                     </div>
@@ -101,10 +102,11 @@ export default function Metodologia() {
                   </div>
                   <div className="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
                     <div className="py-2">
-                      <span className="inline-flex items-center justify-center rounded-md bg-teal-700 p-3 shadow-lg fa-Regular">
-                        <CogIcon
-                          className="h-6 w-6 text-white"
-                          aria-hidden="true"
+                      <span className="inline-flex items-center justify-center rounded-md bg-teal-500 p-3 shadow-lg fa-Regular">
+                        <img
+                          className="object-contain h-5 w-5"
+                          style={{ color: "white" }}
+                          src="https://imgur.com/wrWATho.png"
                         />
                       </span>
                     </div>
@@ -120,10 +122,11 @@ export default function Metodologia() {
                   </div>
                   <div className="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
                     <div className="py-2">
-                      <span className="inline-flex items-center justify-center rounded-md bg-teal-700 p-3 shadow-lg fa-Regular">
-                        <CogIcon
-                          className="h-6 w-6 text-white"
-                          aria-hidden="true"
+                      <span className="inline-flex items-center justify-center rounded-md bg-teal-500 p-3 shadow-lg fa-Regular">
+                        <img
+                          className="object-contain h-5 w-5"
+                          style={{ color: "white" }}
+                          src="https://imgur.com/0mJHCig.png"
                         />
                       </span>
                     </div>
