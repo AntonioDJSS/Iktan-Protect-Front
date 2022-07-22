@@ -1,8 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = [
-  { name: "Inicio", href: "/" },
-  { name: "Servicios", href: "servicios" },
-  { name: "Conocenos", href: "conocenos" },
+  { name: "Pagina Principal", href: "/" },
+  /*   { name: "Servicios", href: "servicios" },
+  { name: "Conocenos", href: "conocenos" }, */
   /*   { name: "Contactanos", href: "email" }, */
 ];
 
