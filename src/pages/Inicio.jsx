@@ -9,9 +9,7 @@ import LogoClouds from "../components/LogoClouds";
 import Section from "../components/Section";
 import Testimonial from "../components/Testimonial";
 
-
 export default function Inicio() {
-  
   return (
     <>
       <Banner />
@@ -21,7 +19,7 @@ export default function Inicio() {
       {/*       <Informative /> */}
       {/*       <Testimonial /> */}
       <Faqs />
-      <LogoClouds />
+      {/*       <LogoClouds />*/}
       <ContactUs />
       <Footer />
     </>
