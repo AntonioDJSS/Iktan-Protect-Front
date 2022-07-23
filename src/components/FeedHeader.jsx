@@ -14,10 +14,13 @@ export default function FeedHeader() {
         />
       </div>
       <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-        <p className="mt-6 text-xl text-teal-100 max-w-3xl">
-          Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque
-          lacus nisi urna, arcu sociis eu. Orci vel lectus nisl eget eget ut
-          consectetur. Sit justo viverra non adipisicing elit distinctio.
+        <p className="mt-6 text-xl text-teal-100 max-w-5xl">
+          Los Seguros dentro del Sector Hidrocarburos, brindan certeza a un
+          mercado abierto que aún es relativamente nuevo en México, esto permite
+          realizar nuestras actividades con una gestión del riesgo dentro de lo
+          razonablemente factible, tanto para daños a terceros como para daños
+          que se pueden ocasionar en el medio ambienten en caso de ocurrencia de
+          un evento no deseado.
         </p>
       </div>
     </div>

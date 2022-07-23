@@ -25,7 +25,7 @@ const supportLinks = [
     name: "Media Inquiries",
     href: "soporte",
     description:
-      "¿Problemas con tu cuenta? Comunicate con soporte técnico para dar seguimiento al problema y obtener una solución oportuna.",
+      "¿Problemas con la plataforma? Comunicate con soporte para dar seguimiento al problema y obtener una solución oportuna.",
     icon: SupportIcon,
   },
 ];

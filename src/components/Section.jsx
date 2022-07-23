@@ -147,9 +147,14 @@ const Section = () => {
             <Graph />
           </div>
 
-          <h2 className="pt-10 text-base font-thin tracking-wider text-gray-800">
-            Valores calculados a {date}, con base en la encuesta de satisfacción
-            digital.
+          <h2 className="pt-10 text-base font-thin tracking-wider text-gray-400">
+            Valores calculados a {date}, con base en la
+            <span>
+              {" "}
+              <a className="italic font-normal text-black" href="calificanos">
+                Encuesta de Satisfacción Digital.
+              </a>
+            </span>
           </h2>
         </div>
       </div>
