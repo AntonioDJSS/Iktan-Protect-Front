@@ -152,7 +152,7 @@ const Section = () => {
             <span>
               {" "}
               <a
-                className="italic font-normal text-gray-600"
+                className="italic font-normal text-gray-500"
                 href="calificanos"
               >
                 Encuesta de Satisfacción Digital.
