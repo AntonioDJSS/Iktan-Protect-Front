@@ -151,7 +151,10 @@ const Section = () => {
             Valores calculados a {date}, con base en la
             <span>
               {" "}
-              <a className="italic font-normal text-black" href="calificanos">
+              <a
+                className="italic font-normal text-gray-600"
+                href="calificanos"
+              >
                 Encuesta de Satisfacción Digital.
               </a>
             </span>
