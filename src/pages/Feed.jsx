@@ -134,7 +134,9 @@ export default function Feed() {
           </div>
         </div>
       </div>
-      <Poliza />
+      <div className="mt-10 md:mt-0">
+        <Poliza />
+      </div>{" "}
       <Footer />
     </>
   );
