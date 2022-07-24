@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FeedHeader from "../components/FeedHeader";
 import Footer from "../components/Footer";
 import HeaderFragment from "../components/HeaderFragment";
+import Poliza from "../components/Poliza";
 /* import "./feed.css";
  */
 
@@ -133,7 +134,7 @@ export default function Feed() {
           </div>
         </div>
       </div>
-
+      <Poliza />
       <Footer />
     </>
   );

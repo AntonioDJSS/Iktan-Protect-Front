@@ -14,6 +14,7 @@ import PoliticasPrivacidad from "./components/PoliticasPrivacidad";
 import { AuthProvider } from "./context/AuthProvider";
 import { QuizProvider } from "./context/QuizProvider";
 import EncuestaEnviada from "./pages/EncuestaEnviada";
+import Cotizacion from "./pages/Cotizacion";
 
 function App() {
   return (
@@ -25,11 +26,18 @@ function App() {
               <Route index element={<Inicio />} />
               <Route path="*" element={<Error404 />} />
               <Route path="email" element={<ContactEmail />} />
+              <Route path="cotizacion" element={<Cotizacion />} />
               <Route path="feed" element={<Feed />} />
               <Route path="metodologia" element={<Metodologia />} />
               <Route path="calificanos" element={<Login />} />
-              <Route path="calificanos/encuesta/finalizado" element={<EncuestaEnviada />} />
-              <Route path="Politicas-Privacidad" element={< PoliticasPrivacidad/>} />
+              <Route
+                path="calificanos/encuesta/finalizado"
+                element={<EncuestaEnviada />}
+              />
+              <Route
+                path="Politicas-Privacidad"
+                element={<PoliticasPrivacidad />}
+              />
             </Route>
 
             <Route path="calificanos/encuesta" element={<RutaProtegida />}>
