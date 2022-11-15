@@ -2,13 +2,50 @@ import { useState } from "react";
 import { Switch } from "@headlessui/react";
 import Footer from "../components/Footer";
 import HeaderFragment from "../components/HeaderFragment";
+//Importar el emailjs para enviar la info del for a un email
+import emailjs from "@emailjs/browser";
+//Importamos formik para el uso de validaciones en el formulario, es mas rapido
+import {Formik, useFormik} from "formik";
+//Importamos el Schema de formulario
+import * as yup from "yup";
 
+
+
+//Logica para el correo
+const sendEmail=(event) => {
+  //Previene el primer elemnto dle formulario post cargado
+  event.preventDefault()
+  //Primer parametro el id del servicio de correos
+  //Segundo parametro template del mensaje
+  //El tercer parametro es el formulario
+  //El cuarto parametro el userid
+  emailjs.sendForm('service_k0bvi3h','template_7fhwtyc',event.target,'McdRsxHmsjkgFRzLl')
+  .then(response => console.log(response))
+  .catch(error => console.log(error));
+}
+  //------------------
+ 
+  //----------------------------------
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+
+
 export default function ContactEmail() {
   const [agreed, setAgreed] = useState(false);
+
+
+  //Logia para las validaciones
+  const basicSchema = yup.object().shape({
+    firstName: yup.string().required("Requerido"),
+    lastName: yup.string().required("Requerido"),
+    company: yup.string().required("Requerido"),
+    email: yup.string().email("Por favor ingrese un correo electronico valido").required(),
+    phoneNumber: yup.string().required("Requerido"),
+    message: yup.string().required("Requerido"),
+
+});
 
   return (
     <>
@@ -91,44 +128,83 @@ export default function ContactEmail() {
               nuestro correo electronico.
             </p>
           </div>
+
           <div className="mt-12">
-            <form
-              action="#"
-              method="POST"
-              className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+
+
+
+
+            <Formik
+                validationSchema={
+                 basicSchema
+                }
+                initialValues={{
+                    firstName:"",
+                    lastName:"",
+                    company:"",
+                    email:"",
+                    phoneNumber:"",
+                    message:""
+                  }}
+                onSubmit={(values,{resetForm}) => {
+                  emailjs.send('service_hjnxxil','template_7fhwtyc',values,'McdRsxHmsjkgFRzLl')
+                  .then(response => console.log(response))
+                  .catch(error => console.log(error));
+                    resetForm();
+                    console.log("Formulario enviado")
+                }}
+            
+            >
+            {({handleSubmit,values,handleChange, handleBlur, touched, errors}) => (
+              <form
+              autoComplete="off"
+              onSubmit={handleSubmit}
+              className="form-mail grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
             >
               <div>
                 <label
-                  htmlFor="first-name"
+                  htmlFor="firstName"
                   className="block text-sm font-medium text-gray-700"
                 >
                   Nombre/s
                 </label>
                 <div className="mt-1">
                   <input
+                    value={values.firstName}
+                    onChange={handleChange}
+
+                    //Valida el formulario cuando hace click fuera de la entrada
+                    onBlur={handleBlur}
                     type="text"
-                    name="first-name"
-                    id="first-name"
+                    name="firstName"
+                    id="firstName"
                     autoComplete="given-name"
-                    className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
+                    className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md" 
                   />
+                  {touched.firstName && errors.firstName && <div className="text-red-600">{errors.firstName}</div>}
                 </div>
               </div>
               <div>
                 <label
-                  htmlFor="last-name"
+                  htmlFor="lastName"
                   className="block text-sm font-medium text-gray-700"
                 >
                   Apellido/s
                 </label>
                 <div className="mt-1">
                   <input
+                    value={values.lastName}
+                    onChange={handleChange}
+                    //Valida el formulario cuando hace click fuera de la entrada
+                    onBlur={handleBlur}
                     type="text"
-                    name="last-name"
-                    id="last-name"
+                    name="lastName"
+                    id="lastName"
                     autoComplete="family-name"
                     className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                   />
+                  {touched.lastName && errors.lastName && <div className="text-red-600">{errors.lastName}</div>}
+
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -140,12 +216,19 @@ export default function ContactEmail() {
                 </label>
                 <div className="mt-1">
                   <input
+                    value={values.company}
+                    onChange={handleChange}
+
+                    //Valida el formulario cuando hace click fuera de la entrada
+                    onBlur={handleBlur}
                     type="text"
                     name="company"
                     id="company"
                     autoComplete="organization"
                     className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                   />
+                   {touched.company && errors.company && <div className="text-red-600">{errors.company}</div>}
+
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -157,17 +240,22 @@ export default function ContactEmail() {
                 </label>
                 <div className="mt-1">
                   <input
+                    value={values.email}
+                    onChange={handleChange}
+                    //Valida el formulario cuando hace click fuera de la entrada
+                    onBlur={handleBlur}
                     id="email"
                     name="email"
                     type="email"
                     autoComplete="email"
                     className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                   />
+                  {touched.email && errors.email && <div className="text-red-600">{errors.email}</div>}
                 </div>
               </div>
               <div className="sm:col-span-2">
                 <label
-                  htmlFor="phone-number"
+                  htmlFor="phoneNumber"
                   className="block text-sm font-medium text-gray-700"
                 >
                   Telefono
@@ -188,13 +276,19 @@ export default function ContactEmail() {
                     </select>
                   </div>
                   <input
+                    value={values.phoneNumber}
+                    onChange={handleChange}
+                    //Valida el formulario cuando hace click fuera de la entrada
+                    onBlur={handleBlur}
                     type="text"
-                    name="phone-number"
-                    id="phone-number"
+                    name="phoneNumber"
+                    id="phoneNumber"
                     autoComplete="tel"
                     className="py-3 px-4 block w-full pl-24 focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
                     placeholder="+52 (55) 55778899"
                   />
+                   {touched.phoneNumber && errors.phoneNumber && <div className="text-red-600">{errors.phoneNumber}</div>}
+
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -206,19 +300,22 @@ export default function ContactEmail() {
                 </label>
                 <div className="mt-1">
                   <textarea
-                    id="message"
+                  value={values.message}
+                  onChange={handleChange}
+                  //Valida el formulario cuando hace click fuera de la entrada
+                  onBlur={handleBlur}
                     name="message"
                     rows={4}
                     className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border border-gray-300 rounded-md"
-                    defaultValue={""}
                   />
+                  {touched.message && errors.message && <div className="text-red-600">{errors.message}</div>}
                 </div>
               </div>
               <div className="sm:col-span-2">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <Switch
-                      checked={agreed}
+                       checked={agreed}
                       onChange={setAgreed}
                       className={classNames(
                         agreed ? "bg-teal-600" : "bg-gray-200",
@@ -258,13 +355,15 @@ export default function ContactEmail() {
               </div>
               <div className="sm:col-span-2">
                 <button
-                  type="submit"
+                type="submit"
                   className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                 >
                   Enviar
                 </button>
               </div>
             </form>
+            )}
+            </Formik>
           </div>
         </div>
       </div>
