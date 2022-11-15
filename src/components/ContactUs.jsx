@@ -9,7 +9,7 @@ import {
 const supportLinks = [
   {
     name: "WhatsApp",
-    href: "https://api.whatsapp.com/send?phone=525540478317&text=%20Hola!%20Queria%20ponerme%20en%20contacto%20con%20un%20experto%20de%20IKTAN%20Protect!",
+    href: "https://api.whatsapp.com/send?phone=8118000630&text=%20Hola!%20Queria%20ponerme%20en%20contacto%20con%20un%20experto%20de%20IKTAN%20Protect!",
     description:
       "La forma más fácil de ponerte en contacto con un experto. Escribenos y te canalizaremos con la persona indicada.",
     icon: PhoneIcon,
