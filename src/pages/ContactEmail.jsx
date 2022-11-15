@@ -15,6 +15,7 @@ import * as yup from "yup";
 const sendEmail=(event) => {
   //Previene el primer elemnto dle formulario post cargado
   event.preventDefault()
+  console.log(event.target)
   //Primer parametro el id del servicio de correos
   //Segundo parametro template del mensaje
   //El tercer parametro es el formulario
