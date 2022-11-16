@@ -146,7 +146,7 @@ export default function ContactEmail() {
                     message:""
                   }}
                 onSubmit={(values,{resetForm}) => {
-                  emailjs.send('service_hjnxxil','template_7fhwtyc',values,'McdRsxHmsjkgFRzLl')
+                  emailjs.send('service_k0bvi3h','template_7fhwtyc',values,'u_3vIdgn_QJPX479_')
                   .then(response => console.log(response))
                   .catch(error => console.log(error));
                     resetForm();
